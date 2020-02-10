@@ -1,0 +1,25 @@
+.recipe .lds-grid {
+	transform: translate(-50%, -50%);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+.recipe-item {
+	width: 350px;
+	height: 600px;
+	max-height: 600px;
+	box-sizing: border-box;
+	box-shadow: 0 0 2px 0 #ccc;
+	padding: 10px;
+	display: inline-block;
+	vertical-align: top;
+	margin: 5px;
+}
+.recipe-item > ul {
+	height: 90px;
+	overflow: auto;
+}
+.recipe-item > img {
+	width: 100%
+}
