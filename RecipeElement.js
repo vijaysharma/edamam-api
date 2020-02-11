@@ -15,8 +15,8 @@ export default class RecipeElement {
 	createRecipeElement = () => {
 		this.element.className = 'recipe-item';
 		this.element.innerHTML = `
-			<h2>${this.recipe.name}</h2><br />
-			<img src=${this.recipe.imageUrl} /><br/>`;
+			<h2>${this.recipe.name}</h2>
+			<img src=${this.recipe.imageUrl} />`;
 		this.element.appendChild(this.ingredientsList());
 		return this;
 	}

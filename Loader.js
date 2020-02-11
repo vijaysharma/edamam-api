@@ -1,11 +1,16 @@
 export default class Loader {
-	constructor() {
+	constructor(className) {
 		this.element = document.createElement('div');
-	}
-	createLoaderElement = (className) => {
 		this.element.className = className;
 		this.element.innerHTML = `<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>`;
-		return this;
+	}
+	addLoaderElement = (holdingElement) => {
+		var child = holdingElement.lastElementChild;
+		while (child) {
+			holdingElement.removeChild(child);
+			child = holdingElement.lastElementChild;
+		}
+		holdingElement.appendChild(this.element);
 	}
 	removeLoaderElement = () => {
 		this.element.parentNode.removeChild(this.element);
